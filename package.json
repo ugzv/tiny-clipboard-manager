@@ -1,0 +1,28 @@
+{
+  "name": "tiny-clipboard-manager",
+  "version": "1.0.0",
+  "description": "A modern, minimal clipboard manager for Windows",
+  "main": "dist/main.js",
+  "scripts": {
+    "dev": "concurrently \"tsc -w\" \"electron .\"",
+    "build": "tsc",
+    "start": "electron ."
+  },
+  "keywords": [
+    "clipboard",
+    "manager",
+    "windows"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "concurrently": "^8.2.2",
+    "electron": "^28.0.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "active-win": "^8.2.1",
+    "electron-store": "^8.1.0"
+  }
+}
