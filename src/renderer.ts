@@ -133,6 +133,12 @@ document.addEventListener('keydown', (e) => {
   } else if (e.key === 'Enter') {
     e.preventDefault();
     pasteSelectedItem();
+  } else if (e.key === 'Home') {
+    e.preventDefault();
+    selectedIndex = 0;
+    renderHistory(filteredHistory);
+    scrollToSelected();
+    pasteSelectedItem();
   }
 });
 

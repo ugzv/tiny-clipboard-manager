@@ -68,8 +68,8 @@ app.whenReady().then(() => {
 
   createWindow();
 
-  // Register global shortcut (Ctrl+Shift+C for Clipboard)
-  const registered = globalShortcut.register('CommandOrControl+Shift+C', () => {
+  // Register global shortcut (Win+C for Clipboard)
+  const registered = globalShortcut.register('Super+C', () => {
     toggleWindow();
     if (mainWindow) {
       mainWindow.webContents.send('history-updated', clipboardManager.getHistory());
@@ -78,7 +78,7 @@ app.whenReady().then(() => {
 
   if (!registered) {
     // Try alternative shortcut if primary fails
-    globalShortcut.register('CommandOrControl+Alt+V', () => {
+    globalShortcut.register('CommandOrControl+Shift+C', () => {
       toggleWindow();
       if (mainWindow) {
         mainWindow.webContents.send('history-updated', clipboardManager.getHistory());
